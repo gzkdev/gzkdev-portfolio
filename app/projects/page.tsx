@@ -1,8 +1,8 @@
-export default function Home() {
+export default function Projects() {
   return (
     <main>
       <h1 className="text-center text-8xl leading-tight tracking-tighter">
-        Home
+        Projects
       </h1>
     </main>
   );
