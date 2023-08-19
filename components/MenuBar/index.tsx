@@ -14,38 +14,45 @@ type Navigation = {
   name: string;
   url: string;
   icon?: string;
+  rel: "A" | "E";
 };
 
-const navigationMap: Navigation[] = [
+const siteMap: Navigation[] = [
   {
     name: "Home",
     url: "/",
     icon: "bg-homeIcon",
+    rel: "A",
   },
   {
     name: "About",
     url: "/about",
     icon: "bg-palleteIcon",
+    rel: "A",
   },
   {
     name: "Projects",
     url: "/projects",
     icon: "bg-bulbIcon",
+    rel: "A",
   },
   {
     name: "Github",
     url: "/",
     icon: "bg-githubIcon",
+    rel: "E",
   },
   {
     name: "Twitter",
     url: "/",
     icon: "bg-twitterIcon",
+    rel: "E",
   },
   {
     name: "Email",
     url: "/",
     icon: "bg-emailIcon",
+    rel: "E",
   },
 ];
 
@@ -58,7 +65,7 @@ export default function MenuBar() {
       onMouseLeave={() => mouseX.set(Infinity)}
       className="fixed bottom-8 left-[50%] z-50 flex max-h-12 max-w-max translate-x-[-50%] items-end justify-center  gap-2 rounded-full border border-[#fdfdfd08] bg-[#fdfdfd0f] p-1 py-0.5"
     >
-      {navigationMap.map((navigation) => (
+      {siteMap.map((navigation) => (
         <NavigationLink
           key={navigation.name}
           mouseX={mouseX}
@@ -89,17 +96,27 @@ function NavigationLink({
     stiffness: 200,
   });
 
-  return (
+  return navigation.rel == "A" ? (
+    <motion.a
+      ref={ref}
+      title={navigation.name}
+      style={{ width }}
+      href={navigation.url}
+      onClick={(e) => {
+        e.preventDefault();
+        router.push(navigation.url);
+      }}
+      className={`flex aspect-square items-center justify-center rounded-full border border-[#fdfdfd08] bg-[#000] bg-center bg-no-repeat [background-size:50%] ${navigation.icon}`}
+    ></motion.a>
+  ) : (
     <motion.a
       ref={ref}
       title={navigation.name}
       href={navigation.url}
       style={{ width }}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`flex aspect-square items-center justify-center rounded-full border border-[#fdfdfd08] bg-[#000] bg-center bg-no-repeat [background-size:50%] ${navigation.icon}`}
-      onClick={(e) => {
-        e.preventDefault();
-        router.push(navigation.url);
-      }}
     ></motion.a>
   );
 }
