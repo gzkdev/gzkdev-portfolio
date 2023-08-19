@@ -3,10 +3,12 @@ import Loader from "@/components/Loader";
 export default function Home() {
   return (
     <main>
-      <Loader text="gzkdev" />
-      <h1 className="text-center text-6xl leading-tight tracking-tighter [font-family:Enigma]">
-        Home
-      </h1>
+      <div className="mx-auto w-full max-w-[900px] px-5 py-20">
+        <Loader text="gzkdev" />
+        <h1 className="font-enigma text-step-5 leading-tight tracking-tighter">
+          GZKDEV
+        </h1>
+      </div>
     </main>
   );
 }
