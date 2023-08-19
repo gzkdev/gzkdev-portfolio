@@ -1,4 +1,7 @@
 "use client";
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
+
 import {
   useMotionValue,
   useTransform,
@@ -6,45 +9,43 @@ import {
   MotionValue,
   useSpring,
 } from "framer-motion";
-import Link from "next/link";
-import { useRef } from "react";
 
 type Navigation = {
   name: string;
   url: string;
-  icon: null;
+  icon?: string;
 };
 
 const navigationMap: Navigation[] = [
   {
     name: "Home",
     url: "/",
-    icon: null,
+    icon: "bg-homeIcon",
   },
   {
     name: "About",
     url: "/about",
-    icon: null,
+    icon: "bg-palleteIcon",
   },
   {
     name: "Projects",
     url: "/projects",
-    icon: null,
+    icon: "bg-bulbIcon",
   },
   {
     name: "Github",
     url: "/",
-    icon: null,
+    icon: "bg-githubIcon",
   },
   {
     name: "Twitter",
     url: "/",
-    icon: null,
+    icon: "bg-twitterIcon",
   },
   {
     name: "Email",
     url: "/",
-    icon: null,
+    icon: "bg-emailIcon",
   },
 ];
 
@@ -55,7 +56,7 @@ export default function MenuBar() {
     <div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="fixed bottom-8 left-[50%] z-50 flex max-h-12 max-w-max translate-x-[-50%] items-end justify-center gap-2  rounded-full border border-[#fdfdfd08] bg-[#fdfdfd0f] p-1 py-0.5"
+      className="fixed bottom-8 left-[50%] z-50 flex max-h-12 max-w-max translate-x-[-50%] items-end justify-center  gap-2 rounded-full border border-[#fdfdfd08] bg-[#fdfdfd0f] p-1 py-0.5"
     >
       {navigationMap.map((navigation) => (
         <NavigationLink
@@ -75,7 +76,8 @@ function NavigationLink({
   mouseX: MotionValue;
   navigation: Navigation;
 }) {
-  const ref = useRef<HTMLSpanElement>(null);
+  const router = useRouter();
+  const ref = useRef<HTMLAnchorElement>(null);
   let distance = useTransform(mouseX, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds?.width / 2;
@@ -88,12 +90,16 @@ function NavigationLink({
   });
 
   return (
-    <Link href={navigation.url}>
-      <motion.span
-        ref={ref}
-        style={{ width }}
-        className="flex aspect-square items-baseline justify-center rounded-full border border-[#fdfdfd08] bg-black"
-      ></motion.span>
-    </Link>
+    <motion.a
+      ref={ref}
+      title={navigation.name}
+      href={navigation.url}
+      style={{ width }}
+      className={`flex aspect-square items-center justify-center rounded-full border border-[#fdfdfd08] bg-[#000] bg-center bg-no-repeat [background-size:50%] ${navigation.icon}`}
+      onClick={(e) => {
+        e.preventDefault();
+        router.push(navigation.url);
+      }}
+    ></motion.a>
   );
 }
