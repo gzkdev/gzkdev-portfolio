@@ -26,7 +26,7 @@ module.exports = {
         "step-5": "clamp(2.80rem, calc(1.32rem + 7.42vw), 7.07rem)",
       },
       fontFamily: {
-        enigma: "Enigma, Sans-serif",
+        nippo: ["Nippo", "Arial", "sans-serif"],
       },
     },
   },

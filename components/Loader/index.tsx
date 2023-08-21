@@ -20,7 +20,7 @@ export default function Loader({ text }: { text: string }) {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="fixed inset-0 z-50 flex origin-center items-center justify-center bg-[#101010] text-[24px] font-bold text-[#fdfdfd]"
+          className="fixed inset-0 z-50 flex origin-center items-center justify-center bg-slate-900 text-[24px] font-bold text-slate-100"
         >
           <motion.div
             variants={boxVariant}
@@ -41,10 +41,7 @@ export default function Loader({ text }: { text: string }) {
 
 function TextMapItem({ letter }: { letter: string }) {
   return (
-    <motion.span
-      variants={textMapVariant}
-      className="inline-block [font-family:Enigma]"
-    >
+    <motion.span variants={textMapVariant} className="inline-block uppercase">
       {letter}
     </motion.span>
   );

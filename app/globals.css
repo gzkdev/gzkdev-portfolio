@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #333; /* rgba(255, 255, 255, 0.4), #333 */
-  background: #101010; /* #0a0a0a , #101010 */
-}
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-300;
+  }
 
-h1,
-h2,
-h3 {
-  color: #fdfdfd;
-  font-weight: 600;
-  /* color: #fdfdfd0f; */
-  /* color: #fdfdfd08; */
+  h1 {
+    @apply text-step-5 font-bold leading-tight tracking-tighter text-slate-100;
+  }
+
+  .wrapper {
+    @apply mx-auto w-full max-w-xl p-4;
+  }
 }
