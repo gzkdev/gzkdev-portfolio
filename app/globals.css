@@ -15,14 +15,14 @@
   }
 
   .wrapper {
-    @apply mx-auto w-full max-w-3xl;
+    @apply mx-auto w-full lg:max-w-3xl;
   }
 
   .grid-item {
-    @apply rounded lg:min-h-[initial] lg:bg-slate-800/50;
+    @apply lg:min-h-[initial];
   }
 
   .sticky-header {
-    @apply flex w-full items-center gap-2 bg-inherit p-5 text-xs font-semibold uppercase tracking-wide text-slate-500;
+    @apply sticky top-0 z-50 w-full border-b-[1px] border-b-slate-800 bg-slate-900 px-5 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500 lg:border-none lg:py-5;
   }
 }
