@@ -19,7 +19,7 @@
   }
 
   .grid-item {
-    @apply rounded bg-slate-800/50 lg:min-h-[initial];
+    @apply rounded lg:min-h-[initial] lg:bg-slate-800/50;
   }
 
   .sticky-header {

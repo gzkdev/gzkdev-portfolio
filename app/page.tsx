@@ -14,10 +14,10 @@ export default function Home() {
       {/* [&>*]:outline */}
       <Loader text="home" />
       <div className="grid-item top-0 lg:sticky lg:col-[1/3] lg:row-[1/6]">
-        <div className="wrapper h-full w-full text-center lg:text-start">
+        <div className="wrapper h-full w-full  lg:text-start">
           <div className="sticky-header">Home</div>
-          <div className="flex w-full flex-col items-center px-5 py-16 lg:items-start">
-            <div className="relative aspect-square w-full max-w-[200px] overflow-hidden rounded-full border-[4px] border-teal-500 grayscale-[50%] transition hover:grayscale-0">
+          <div className="flex w-full flex-col px-5 py-5 lg:items-start">
+            <div className="relative aspect-square w-full max-w-[144px] overflow-hidden rounded-full border-[4px] border-teal-500 grayscale-[50%] transition hover:grayscale-0">
               <Image
                 src={ProfileImage}
                 objectFit="cover"
@@ -25,15 +25,15 @@ export default function Home() {
                 className=""
               />
             </div>
-            <div className="my-5 flex flex-col gap-1">
-              <span className="text-4xl font-semibold leading-tight text-slate-100">
+            <div className="my-5 flex flex-col leading-tight tracking-tighter">
+              <span className="text-4xl font-semibold  text-slate-100">
                 Godswill Ezihe
               </span>
               <span className="text-lg font-semibold text-slate-500">
                 Software Engineer
               </span>
             </div>
-            <div className="mb-10 flex max-w-md flex-col items-center gap-5 lg:items-start">
+            <div className="mb-10 flex max-w-md flex-col gap-5 lg:items-start">
               <p>
                 I'm a software engineer from Nigeria, focused on building
                 performant and scalable applications that are infused with
@@ -41,7 +41,7 @@ export default function Home() {
               </p>
               <a
                 href="#"
-                className="sm rounded bg-teal-300 px-8 py-4 font-semibold text-teal-900 sm:w-max"
+                className="w-max rounded bg-teal-300 px-8 py-3 font-semibold tracking-tight text-teal-900 sm:w-max"
               >
                 Get in touch
               </a>
@@ -67,8 +67,8 @@ export default function Home() {
         <div className="wrapper h-full">
           <div className="flex h-full w-full flex-col">
             <div className="sticky-header">Socials</div>
-            <div className="flex px-5 pb-5">
-              <ul className="flex items-center justify-center gap-6 text-3xl lg:justify-start">
+            <div className="flex px-5 pb-16 lg:pb-5">
+              <ul className="flex w-full items-center justify-between gap-6 text-3xl lg:justify-start">
                 <li>
                   <a
                     href="http://#"
