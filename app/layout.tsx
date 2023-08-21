@@ -2,8 +2,18 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Local from "next/font/local";
 
-const Nippo = Local({
-  src: "../public/assets/fonts/Nippo-Variable.ttf",
+// const Nippo = Local({
+//   src: "../public/assets/fonts/Nippo-Variable.ttf",
+//   display: "swap",
+// });
+
+const GeneralSans = Local({
+  src: "../public/assets/fonts/GeneralSans-Variable.ttf",
+  display: "swap",
+});
+
+const Switzer = Local({
+  src: "../public/assets/fonts/Switzer-Variable.ttf",
   display: "swap",
 });
 
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Nippo.className}>{children}</body>
+      <body className={Switzer.className}>{children}</body>
     </html>
   );
 }
