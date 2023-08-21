@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply h-full;
+  }
   body {
-    @apply bg-slate-900 text-slate-300;
+    @apply h-full bg-slate-900 font-nippo text-slate-300;
   }
 
   h1 {
@@ -13,5 +16,9 @@
 
   .wrapper {
     @apply mx-auto w-full max-w-xl p-4;
+  }
+
+  .grid-item {
+    @apply rounded bg-slate-700/50 p-5 lg:h-[initial];
   }
 }
