@@ -1,4 +1,6 @@
 import Loader from "@/components/Loader";
+import Image from "next/image";
+import ProfileImage from "../public/assets/images/profile-4.jpg";
 import {
   IoLogoGithub,
   IoLogoTwitter,
@@ -13,13 +15,21 @@ export default function Home() {
       <Loader text="home" />
       <div className="grid-item top-0 lg:sticky lg:col-[1/3] lg:row-[1/6]">
         <div className="wrapper h-full w-full text-center lg:text-start">
+          <div className="sticky-header">Home</div>
           <div className="flex w-full flex-col items-center px-5 py-16 lg:items-start">
-            <div className="relative aspect-square w-full max-w-[180px] overflow-hidden rounded border"></div>
+            <div className="relative aspect-square w-full max-w-[200px] overflow-hidden rounded-full border-[4px] border-teal-500 grayscale-[50%] transition hover:grayscale-0">
+              <Image
+                src={ProfileImage}
+                objectFit="cover"
+                alt="Godswill Ezihe"
+                className=""
+              />
+            </div>
             <div className="my-5 flex flex-col gap-1">
               <span className="text-4xl font-semibold leading-tight text-slate-100">
                 Godswill Ezihe
               </span>
-              <span className="font-semibold text-slate-500">
+              <span className="text-lg font-semibold text-slate-500">
                 Software Engineer
               </span>
             </div>

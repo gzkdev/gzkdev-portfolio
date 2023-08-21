@@ -23,6 +23,6 @@
   }
 
   .sticky-header {
-    @apply sticky top-0 flex w-full items-center gap-2 bg-inherit p-5 text-sm font-semibold uppercase text-slate-500;
+    @apply flex w-full items-center gap-2 bg-inherit p-5 text-xs font-semibold uppercase tracking-wide text-slate-500;
   }
 }
