@@ -1,3 +1,4 @@
+import Menu from "@/components/Menu";
 import "./globals.css";
 import type { Metadata } from "next";
 import Local from "next/font/local";
@@ -19,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Switzer.className}>{children}</body>
+      <body className={Switzer.className}>
+        {children}
+        <Menu />
+      </body>
     </html>
   );
 }
