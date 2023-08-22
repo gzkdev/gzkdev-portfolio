@@ -20,7 +20,7 @@ export default function Menu() {
         title="Home"
         href="/"
         data-active={pathname == "/"}
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaHouseChimneyWindow />
       </Link>
@@ -28,7 +28,7 @@ export default function Menu() {
         title="Projects"
         href="/projects"
         data-active={pathname == "/projects"}
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaHammer />
       </Link>
@@ -36,7 +36,7 @@ export default function Menu() {
         title="About"
         href="/about"
         data-active={pathname == "/about"}
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaUserAstronaut />
       </Link>
@@ -45,7 +45,7 @@ export default function Menu() {
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaGithub />
       </Link>
@@ -54,7 +54,7 @@ export default function Menu() {
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaTwitter />
       </Link>
@@ -63,7 +63,7 @@ export default function Menu() {
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaLinkedinIn />
       </Link>
@@ -72,7 +72,7 @@ export default function Menu() {
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition sm:w-10"
+        className="inline-flex aspect-square w-8 items-center justify-center rounded-full transition xs:w-10 sm:w-10"
       >
         <FaCodepen />
       </Link>

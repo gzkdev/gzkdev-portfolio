@@ -20,7 +20,7 @@ export default function Loader({ text }: { text: string }) {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="fixed inset-0 z-50 flex origin-center items-center justify-center bg-slate-900 text-[24px] font-bold text-slate-100"
+          className="fixed inset-0 z-50 flex origin-center items-center justify-center bg-slate-900 font-bold text-slate-100"
         >
           <motion.div
             variants={boxVariant}
@@ -60,7 +60,6 @@ const containerVariant = {
   exit: {
     opacity: 0,
     transition: {
-      delay: 0.5,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -69,20 +68,20 @@ const containerVariant = {
 const boxVariant = {
   initial: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.04,
       staggerDirection: -1,
     },
   },
   animate: {
     transition: {
       delayChildren: 0.1,
-      staggerChildren: 0.05,
+      staggerChildren: 0.04,
       staggerDirection: 1,
     },
   },
   exit: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.04,
       staggerDirection: -1,
     },
   },
