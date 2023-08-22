@@ -60,6 +60,7 @@ const containerVariant = {
   exit: {
     opacity: 0,
     transition: {
+      delay: 0.5,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -93,14 +94,10 @@ const textMapVariant = {
   },
   animate: {
     y: 0,
-    transition: {
-      ease: [0.37, 0, 0.63, 1],
-    },
+    // transition: {ease: [0.37, 0, 0.63, 1]},
   },
   exit: {
     y: "-100%",
-    transition: {
-      ease: [0.37, 0, 0.63, 1],
-    },
+    // transition: { ease: [0.37, 0, 0.63, 1]},
   },
 };
