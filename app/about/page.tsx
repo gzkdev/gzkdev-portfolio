@@ -1,9 +1,8 @@
-import Loader from "@/components/Loader";
+import React from "react";
 
 export default function About() {
   return (
-    <main className="grid h-full gap-1 p-1">
-      <Loader text="about" />
+    <main>
       <h1>About</h1>
     </main>
   );
