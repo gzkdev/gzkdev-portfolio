@@ -15,7 +15,7 @@ export default function Menu() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-10 left-[50%] z-50 flex translate-x-[-50%] gap-2 rounded-full border border-slate-700 bg-slate-800/50 p-2 text-slate-500 backdrop-blur-md sm:text-xl [&>a:hover]:text-sky-300 [&>a[data-active=true]]:text-sky-300 [&>a]:bg-slate-900">
+    <nav className="fixed bottom-10 left-[50%] z-50 flex translate-x-[-50%] gap-2 rounded-full border border-slate-700 bg-slate-800/50 p-2 text-slate-500 backdrop-blur sm:text-xl [&>a:hover]:text-sky-300 [&>a[data-active=true]]:text-sky-300 [&>a]:bg-slate-900">
       <Link
         title="Home"
         href="/"

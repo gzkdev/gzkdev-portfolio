@@ -38,8 +38,8 @@ function HomeSection() {
 function ProjectsSection() {
   return (
     <section className="flex min-h-full w-full flex-col items-center gap-5 text-center">
-      <div className="flex flex-col items-center gap-2 p-4">
-        <div className="text-4xl font-bold text-slate-300">Projects</div>
+      <div className="sticky top-0 z-20 flex w-full flex-col items-center gap-2 bg-slate-900/50 p-4 backdrop-blur md:static md:bg-transparent">
+        <div className="text-sm font-semibold uppercase">Projects</div>
       </div>
       <ul className="grid w-full max-w-4xl gap-5 px-5 pb-28 pt-5 text-center sm:grid-cols-2 [&>li]:rounded-3xl [&>li]:bg-slate-800/50">
         {/* md:grid-rows-4 md:[&>li:nth-child(2)]:row-span-2 md:[&>li:nth-child(3)]:row-span-2 */}
@@ -83,7 +83,7 @@ function ProjectsSection() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-sky mt-5 flex min-w-[140px] items-center justify-center gap-1 rounded-full border border-slate-900 bg-slate-900 p-5 text-slate-200 transition hover:text-sky-300"
+              className="hover:text-sky mt-5 flex w-full items-center justify-center gap-1 rounded-full border border-slate-900 bg-sky-300 p-5 font-semibold text-sky-900 transition hover:opacity-50"
             >
               View
             </a>
