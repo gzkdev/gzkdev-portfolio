@@ -20,7 +20,7 @@ function HomeSection() {
   return (
     <section
       id="home"
-      className="flex min-h-full w-full flex-col items-center justify-center gap-5 text-center"
+      className="flex w-full flex-col items-center justify-center gap-5 py-20 text-center lg:min-h-full"
     >
       <div className="aspect-square min-w-[140px] max-w-[240px] cursor-crosshair overflow-hidden rounded-full bg-slate-200 grayscale-[30%] hover:grayscale-[10%]">
         <Image src={ProfileImage} alt="Godswill Ezihe" />
@@ -40,12 +40,6 @@ function ProjectsSection() {
     <section className="flex min-h-full w-full flex-col items-center gap-5 text-center">
       <div className="flex flex-col items-center gap-2 p-4">
         <div className="text-4xl font-bold text-slate-300">Projects</div>
-        <a
-          href="#"
-          className="text-sky-300 underline decoration-dotted underline-offset-2"
-        >
-          View Archive
-        </a>
       </div>
       <ul className="grid w-full max-w-4xl gap-5 px-5 pb-28 pt-5 text-center sm:grid-cols-2 [&>li]:rounded-3xl [&>li]:bg-slate-800/50">
         {/* md:grid-rows-4 md:[&>li:nth-child(2)]:row-span-2 md:[&>li:nth-child(3)]:row-span-2 */}
@@ -99,3 +93,7 @@ function ProjectsSection() {
     </section>
   );
 }
+
+// function ContactSection(){
+//   return ()
+// }
