@@ -1,6 +1,6 @@
 import Loader from "@/components/Loader";
 import Image from "next/image";
-import ProfileImage from "../public/assets/images/profile-1.jpeg";
+import ProfileImage from "../public/assets/images/profile-4.jpg";
 import { FaArrowUpLong, FaCode } from "react-icons/fa6";
 import { Projects } from "@/data";
 
@@ -13,11 +13,7 @@ export default function Home() {
         className="flex min-h-full w-full flex-col items-center justify-center gap-5 text-center"
       >
         <div className="aspect-square min-w-[140px] max-w-[240px] cursor-crosshair overflow-hidden rounded-full bg-slate-200 grayscale-[30%] hover:grayscale-[10%]">
-          <Image
-            src={ProfileImage}
-            alt="Godswill Ezihe"
-            className="h-[80%] w-[80%] translate-x-[10%] translate-y-[-10%] scale-[1.125] select-none"
-          />
+          <Image src={ProfileImage} alt="Godswill Ezihe" />
         </div>
         <div>
           <h2 className="text-4xl font-bold tracking-tight text-slate-300">
