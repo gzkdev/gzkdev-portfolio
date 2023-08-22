@@ -34,7 +34,7 @@ export default function Footer() {
             <VercelLogo />
           </div>
         </div>
-        <div>
+        <div className="max-w-sm">
           Loosely designed and engineered in Visual Studio Code by &nbsp;
           <a
             title="Godswill Ezihe - @gzkdev"
