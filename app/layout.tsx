@@ -1,10 +1,14 @@
-import Menu from "@/components/Menu";
 import "./globals.css";
 import type { Metadata } from "next";
 import Local from "next/font/local";
 
-const Switzer = Local({
-  src: "../public/assets/fonts/Switzer-Variable.ttf",
+// const Switzer = Local({
+//   src: "../public/assets/fonts/Switzer-Variable.ttf",
+//   display: "swap",
+// });
+
+const JetBrainsMono = Local({
+  src: "../public/assets/fonts/JetBrainsMono[wght].ttf",
   display: "swap",
 });
 
@@ -20,10 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={Switzer.className}>
-        {children}
-        <Menu />
-      </body>
+      <body className={JetBrainsMono.className}>{children}</body>
     </html>
   );
 }
