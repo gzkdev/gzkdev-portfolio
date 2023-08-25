@@ -13,7 +13,7 @@ export default function Home() {
       <div className="py-16 lg:flex lg:justify-between lg:py-10">
         <div className="top-0 px-6 lg:sticky lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:p-16 xl:p-24">
           <header>
-            <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               <Link href="/">Godswill Ezihe</Link>
             </h1>
             <h2 className="py-2 text-xl leading-tight tracking-tight">
